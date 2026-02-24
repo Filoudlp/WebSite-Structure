@@ -1,0 +1,5 @@
+components_by_slot:
+  content: []
+custom_component: false
+is_package: true
+layout: {type: 'form:dep_gqlhr7sei7ys7:Layouts.NavigationDrawerLayout'}
