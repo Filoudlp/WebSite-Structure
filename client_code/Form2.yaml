@@ -1,0 +1,15 @@
+components_by_slot:
+  app_bar_title:
+  - layout_properties: {}
+    name: text_1
+    properties: {text: Main menu}
+    type: form:dep_gqlhr7sei7ys7:_Components.Text
+  content: []
+  content_slot:
+  - layout_properties: {}
+    name: form1_1
+    properties: {}
+    type: form:Form1
+custom_component: false
+is_package: false
+layout: {type: 'form:Form3'}

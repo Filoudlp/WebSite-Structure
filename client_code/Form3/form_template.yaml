@@ -1,0 +1,10 @@
+components_by_slot:
+  content: []
+  navigation:
+  - layout_properties: {}
+    name: outlined_button_1
+    properties: {role: outlined-button, text: outlined_button_1}
+    type: Button
+is_package: true
+layout: {type: 'form:dep_gqlhr7sei7ys7:Layouts.NavigationRailLayout'}
+slots: {}
