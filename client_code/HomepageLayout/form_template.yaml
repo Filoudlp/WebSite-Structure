@@ -1,14 +1,28 @@
 components_by_slot:
+  content: []
   nav_drawer: []
   navigation:
-  - layout_properties: {}
-    name: calculator_navigation_link
-    properties: {icon: 'mi:calculate', navigate_to: Calculator, text: Calculator}
-    type: form:dep_gqlhr7sei7ys7:_Components.NavigationLink
+  - components:
+    - layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      name: button_1
+      properties: {text: Poutre BA}
+      type: form:dep_gqlhr7sei7ys7:_Components.Button
+    - layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      name: button_3
+      properties: {text: Poutre CM}
+      type: form:dep_gqlhr7sei7ys7:_Components.Button
+    - layout_properties: {slot: anvil-m3-buttonMenu-slot}
+      name: button_4
+      properties: {text: Poteau CM}
+      type: form:dep_gqlhr7sei7ys7:_Components.Button
+    layout_properties: {}
+    name: button_menu_1
+    properties: {appearance: elevated, text: Calculette}
+    type: form:dep_gqlhr7sei7ys7:_Components.ButtonMenu
   - event_bindings: {click: stripe_pricing_link_click}
     layout_properties: {}
     name: pricing_navigation_link
-    properties: {icon: 'mi:attach_money', text: Pricing}
+    properties: {icon: 'mi:attach_money', selected: false, text: Pricing}
     type: form:dep_gqlhr7sei7ys7:_Components.NavigationLink
   - event_bindings: {click: stripe_pricing_link_click}
     layout_properties: {}

@@ -31,5 +31,5 @@ components:
 container:
   event_bindings: {show: form_show}
   type: ColumnPanel
-custom_component: true
+custom_component: false
 is_package: true
