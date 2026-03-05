@@ -1,0 +1,28 @@
+components_by_slot:
+  content:
+  - layout_properties: {}
+    name: heading_1
+    properties: {align: center, text: Calculatrice Poutre CM}
+    type: form:dep_gqlhr7sei7ys7:_Components.Heading
+  - layout_properties: {}
+    name: heading_2
+    properties:
+      text: |
+        Géométrie
+    type: form:dep_gqlhr7sei7ys7:_Components.Heading
+  - layout_properties: {}
+    name: heading_3
+    properties:
+      text: |
+        Matériaux
+    type: form:dep_gqlhr7sei7ys7:_Components.Heading
+  - layout_properties: {}
+    name: heading_4
+    properties: {text: Effort}
+    type: form:dep_gqlhr7sei7ys7:_Components.Heading
+  - layout_properties: {}
+    name: heading_5
+    properties: {text: Options avancés}
+    type: form:dep_gqlhr7sei7ys7:_Components.Heading
+is_package: true
+layout: {type: 'form:Layout_Calculation'}

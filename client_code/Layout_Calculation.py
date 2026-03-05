@@ -1,4 +1,4 @@
-from ._anvil_designer import Form3Template
+from ._anvil_designer import Layout_CalculationTemplate
 from anvil import *
 import anvil.server
 import anvil.users
@@ -7,7 +7,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class Form3(Form3Template):
+class Layout_Calculation(Layout_CalculationTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
