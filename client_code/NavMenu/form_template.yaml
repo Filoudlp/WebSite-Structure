@@ -14,9 +14,9 @@ components:
     type: form:dep_gqlhr7sei7ys7:_Components.NavigationLink
   layout_properties: {grid_position: 'JNGZLG,FNAPXN'}
   name: icon_button_menu_1
-  properties: {align: center, role: '', visible: true}
+  properties: {align: center, appearance: standard, role: '', visible: true}
   type: form:dep_gqlhr7sei7ys7:_Components.IconButtonMenu
-- layout_properties: {grid_position: 'WIWQGH,IHOBMZ'}
+- layout_properties: {grid_position: 'SFFYUA,FMGYXD'}
   name: text_1
   properties: {align: center, text: Projet}
   type: form:dep_gqlhr7sei7ys7:_Components.Text
