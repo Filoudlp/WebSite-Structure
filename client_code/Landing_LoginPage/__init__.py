@@ -8,7 +8,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-from ..Calculator import Calculator
+from ..Poutre_CM import Poutre_CM
 
 class Landing_LoginPage(Landing_LoginPageTemplate):
   def __init__(self, **properties):
@@ -21,13 +21,10 @@ class Landing_LoginPage(Landing_LoginPageTemplate):
     """This method is called when the button is clicked"""
     user = anvil.users.login_with_form(allow_cancel=True, show_signup_option=True, allow_remembered=True)
     if user:
-      open_form('Calculator')
+      open_form('Poutre_CM')
 
   # TODO check if this works in init, move if it does
   def form_show(self, **event_args):
     """This method is called when the HTML panel is shown on the screen"""
     if anvil.users.get_user():
-      open_form('Calculator')
-    # TEMPLATE EXPLANATION ONLY - DELETE THIS ELSE BRANCH WHEN YOU'RE READY
-    else:
-      Notification("Here's your SaaS app's login page. To start click login and then signup for an account.", title="Template Explanation", timeout=None, style="warning").show()
+      open_form('Poutre_CM')
