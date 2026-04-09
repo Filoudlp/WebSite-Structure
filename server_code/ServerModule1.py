@@ -4,7 +4,7 @@ import json
 
 # URL de ton API hébergée sur ton serveur (ou Uplink)
 API_BASE_URL = "https://ta-librairie-api.structure.com/v1"
-API_KEY = anvil.secrets.get_secret("my_api_key") # Pour sécuriser l'accès
+API_KEY = 1#anvil.secrets.get_secret("my_api_key") # Pour sécuriser l'accès
 
 @anvil.server.callable
 def call_calculation_api(payload_json):

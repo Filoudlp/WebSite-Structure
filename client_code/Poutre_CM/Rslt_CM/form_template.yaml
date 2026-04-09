@@ -1,0 +1,45 @@
+components:
+- layout_properties: {grid_position: 'UQOXLI,MBUECF'}
+  name: text_1
+  properties: {text: Résultat}
+  type: form:dep_gqlhr7sei7ys7:_Components.Text
+- components:
+  - layout_properties: {grid_position: 'YZQXTS,WPUMPU WRBYIK,SGCPIQ'}
+    name: lbl_elu
+    properties: {align: center, text: ELU}
+    type: form:dep_gqlhr7sei7ys7:_Components.Text
+  - layout_properties: {grid_position: 'YZQXTS,WPUMPU TNXFTK,EUZPAH'}
+    name: plt_elu
+    properties: {height: 164.33331298828125}
+    type: Plot
+  - layout_properties: {grid_position: 'YZQXTS,WPUMPU YQGKCK,UPQPGL'}
+    name: lbl_elu_percent
+    properties: {text: 'Taux d''utilisation : {{pourcentage}}'}
+    type: form:dep_gqlhr7sei7ys7:_Components.Text
+  - layout_properties: {grid_position: 'YZQXTS,WPUMPU RALKQB,QEBRVE'}
+    name: lbl_elu_worst_verif
+    properties: {text: 'Vérif la pire : {{NOM}}'}
+    type: form:dep_gqlhr7sei7ys7:_Components.Text
+  - layout_properties: {grid_position: 'YZQXTS,XIGYDY IXNENS,FBGLQU'}
+    name: lbl_els
+    properties: {align: center, text: ELS}
+    type: form:dep_gqlhr7sei7ys7:_Components.Text
+  - layout_properties: {grid_position: 'YZQXTS,XIGYDY BYYGAS,NVOPHW'}
+    name: plt_els
+    properties: {height: 168.6666259765625}
+    type: Plot
+  - layout_properties: {grid_position: 'YZQXTS,XIGYDY GPDVPZ,PMZZJW'}
+    name: lbl_els_percent
+    properties: {text: 'Taux d''utilisation : {{pourcentage}}'}
+    type: form:dep_gqlhr7sei7ys7:_Components.Text
+  - layout_properties: {grid_position: 'YZQXTS,XIGYDY OTOXWE,ERXZHM'}
+    name: lbl_els_worst_verif
+    properties: {text: 'Vérif la pire : {{NOM}}'}
+    type: form:dep_gqlhr7sei7ys7:_Components.Text
+  layout_properties: {grid_position: 'KEIKCO,DKXCTK'}
+  name: outlined_card_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
+container: {type: ColumnPanel}
+custom_component: true
+is_package: true

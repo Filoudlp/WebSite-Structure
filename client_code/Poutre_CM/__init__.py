@@ -15,40 +15,42 @@ class Poutre_CM(Poutre_CMTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.outlined_button_1_click()
+    self.btn_optional_click()
+    self.btn_detail_rslt_click()
 
     # Any code you write here will run before the form opens.
 
-  @handle("button_1", "click")
-  def button_1_click(self, **event_args):
+  @handle("btn_calc", "click")
+  def btn_calc_click(self, **event_args):
     """This method is called when the component is clicked."""
-    self.layout.fun_show_sidesheet(False)
+    #self.layout.fun_show_sidesheet(False)
+    media_obj = anvil.server.call('make_plot')
+    self.plot_cm_1.img_pou.source = media_obj
 
-  @handle("outlined_button_1", "click")
-  def outlined_button_1_click(self, **event_args):
+  @handle("btn_optional", "click")
+  def btn_optional_click(self, **event_args):
     """This method is called when the button is clicked"""
-    if self.outlined_button_1.icon == "fa:arrow-down":
-      self.outlined_button_1.icon = "fa:arrow-right"
+    if self.btn_optional.icon == "fa:arrow-down":
+      self.btn_optional.icon = "fa:arrow-right"
       self.option_avancer_cm_1.visible = False
     else:
-      self.outlined_button_1.icon = "fa:arrow-down"
+      self.btn_optional.icon = "fa:arrow-down"
       self.option_avancer_cm_1.visible = True
 
-  @handle("outlined_button_2", "click")
-  def outlined_button_2_click(self, **event_args):
+  @handle("btn_hide", "click")
+  def btn_hide_click(self, **event_args):
     """This method is called when the button is clicked"""
-    if self.outlined_button_2.icon == "fa:arrow-right":
-      self.outlined_button_2.icon = "fa:arrow-left"
-      self.outlined_button_3.icon = "fa:arrow-left"
+    if self.btn_detail_rslt.icon == "fa:arrow-right":
+      self.btn_detail_rslt.icon = "fa:arrow-left"
+      self.btn_hide.icon = "fa:arrow-left"
       self.layout.fun_show_sidesheet(False)
     else:
-      self.outlined_button_2.icon = "fa:arrow-right"
-      self.outlined_button_3.icon = "fa:arrow-right"
+      self.btn_detail_rslt.icon = "fa:arrow-right"
+      self.btn_hide.icon = "fa:arrow-right"
       self.layout.fun_show_sidesheet(True)
 
-  @handle("outlined_button_3", "click")
-  def outlined_button_3_click(self, **event_args):
+  @handle("btn_detail_rslt", "click")
+  def btn_detail_rslt_click(self, **event_args):
     """This method is called when the button is clicked"""
-    self.outlined_button_2_click()
-
+    self.btn_hide_click()
     

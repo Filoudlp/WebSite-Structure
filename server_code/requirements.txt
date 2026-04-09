@@ -1,1 +1,3 @@
 stripe
+matplotlib
+numpy

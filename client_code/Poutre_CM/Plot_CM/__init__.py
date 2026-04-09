@@ -1,7 +1,7 @@
-from ._anvil_designer import option_avancer_CMTemplate
+from ._anvil_designer import Plot_CMTemplate
 from anvil import handle
 
-class option_avancer_CM(option_avancer_CMTemplate):
+class Plot_CM(Plot_CMTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
