@@ -29,12 +29,12 @@ class Poutre_CM(Poutre_CMTemplate):
     #self.layout.fun_show_sidesheet(False)
     # Récupère les inputs depuis l'interface
     payload = {
-      "section": "IPE 80",    # "IPE 80"
-      "material": "self.dd_material.selected_value",  # "S235"
-      "length": "float(self.tb_length.text)",         # mm
-      "N": "float(self.tb_N.text or 0)",              # N
-      "Vz": "float(self.tb_Vz.text or 0)",            # N
-      "My": "float(self.tb_My.text or 0)",            # N.mm
+      "section": self.geometrie_1.ddm_section.value,    # "IPE 80"
+      "material": self.materiaux_cm_1.steel_grade_ddm.items,  # "S235"
+      "length": self.geometrie_1.tbx_length.text,         # mm
+      "N": self.effort_cm_2.tbx_N.text,              # N
+      "Vz": self.effort_cm_2.tbx_vz.text,            # N
+      "My": self.effort_cm_2.tbx_my.text,            # N.mm
     }
     API_URL = "https://alex25071.pythonanywhere.com/api/pou_cm"
     try:
