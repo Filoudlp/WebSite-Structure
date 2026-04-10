@@ -38,13 +38,6 @@ class Poutre_CM(Poutre_CMTemplate):
     }
     API_URL = "https://alex25071.pythonanywhere.com/api/pou_cm"
     try:
-      r = anvil.http.request("https://alex25071.pythonanywhere.com/api/health")
-      print(r)
-      print("All good")
-    except:
-      print("⚠️ Serveur indisponible")
-    # Appel API
-    try:
       response = anvil.http.request(
         url=API_URL,
         method="POST",

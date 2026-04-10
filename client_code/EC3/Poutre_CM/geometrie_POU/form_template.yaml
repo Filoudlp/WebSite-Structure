@@ -8,7 +8,8 @@ components:
     name: text_1
     properties: {text: Type de profilé}
     type: form:dep_gqlhr7sei7ys7:_Components.Text
-  - layout_properties: {grid_position: 'PSMXJW,IDQFNW'}
+  - event_bindings: {}
+    layout_properties: {grid_position: 'PSMXJW,IDQFNW'}
     name: ddm_section
     properties: {appearance: outlined}
     type: form:dep_gqlhr7sei7ys7:_Components.DropdownMenu
@@ -34,75 +35,75 @@ components:
     type: Button
   - components:
     - layout_properties: {grid_position: 'AWCIFQ,XOKMEZ'}
-      name: text_4
+      name: lbl_b
       properties: {text: 'b [mm]'}
       type: form:dep_gqlhr7sei7ys7:_Components.Text
     - layout_properties: {grid_position: 'AWCIFQ,CCQLBQ'}
-      name: text_box_3
+      name: txb_b
       properties: {appearance: outlined}
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     - layout_properties: {grid_position: 'OYQNOH,OSZJTL'}
-      name: text_7
+      name: lbl_h
       properties: {text: 'h [mm]'}
       type: form:dep_gqlhr7sei7ys7:_Components.Text
     - layout_properties: {grid_position: 'OYQNOH,XHTVSW'}
-      name: text_box_4
+      name: txb_h
       properties: {appearance: outlined}
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     - layout_properties: {grid_position: 'NYOSGK,AYAETZ'}
-      name: text_8
+      name: lbl_e
       properties: {text: 'e [mm]'}
       type: form:dep_gqlhr7sei7ys7:_Components.Text
     - layout_properties: {grid_position: 'NYOSGK,VFGNQX'}
-      name: text_box_5
+      name: txb_e
       properties: {appearance: outlined}
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     - layout_properties: {grid_position: 'OJOPOU,RFUUXP'}
-      name: text_9
+      name: lbl_a
       properties: {text: 'A [mm2]'}
       type: form:dep_gqlhr7sei7ys7:_Components.Text
     - layout_properties: {grid_position: 'OJOPOU,CSFHAN'}
-      name: text_box_7
+      name: txb_A
       properties: {appearance: outlined}
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     - layout_properties: {grid_position: 'ZEWAHY,AOYLAZ'}
-      name: text_13
+      name: lbl_av
       properties: {text: 'Av [mm2]'}
       type: form:dep_gqlhr7sei7ys7:_Components.Text
     - layout_properties: {grid_position: 'ZEWAHY,PWRGKP'}
-      name: text_box_12
+      name: txb_Av
       properties: {appearance: outlined}
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     - layout_properties: {grid_position: 'WLMULS,SJJFLW'}
-      name: text_10
+      name: lbl_Iy
       properties: {text: 'Iy [mm4]'}
       type: form:dep_gqlhr7sei7ys7:_Components.Text
     - layout_properties: {grid_position: 'WLMULS,IXNTYI'}
-      name: text_box_6
+      name: txb_Iy
       properties: {appearance: outlined}
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     - layout_properties: {grid_position: 'HQFGMV,PURCOO'}
-      name: text_11
+      name: lbl_Iz
       properties: {text: 'Iz [mm4]'}
       type: form:dep_gqlhr7sei7ys7:_Components.Text
     - layout_properties: {grid_position: 'HQFGMV,OAEHVQ'}
-      name: text_box_8
+      name: txb_Iz
       properties: {appearance: outlined}
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     - layout_properties: {grid_position: 'GKYKVG,XNYSXZ'}
-      name: text_5
+      name: lbl_Wy
       properties: {text: 'Wy [mm3]'}
       type: form:dep_gqlhr7sei7ys7:_Components.Text
     - layout_properties: {grid_position: 'GKYKVG,YNZNKE'}
-      name: text_box_9
+      name: txb_Wy
       properties: {appearance: outlined}
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     - layout_properties: {grid_position: 'TBVYZV,UGWGNA'}
-      name: text_12
+      name: lbl_Wz
       properties: {text: 'Wz [mm3]'}
       type: form:dep_gqlhr7sei7ys7:_Components.Text
     - layout_properties: {grid_position: 'TBVYZV,HIVDAC'}
-      name: text_box_10
+      name: txb_Wz
       properties: {appearance: outlined}
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     - layout_properties: {grid_position: 'NXWKIL,LWBGIZ'}
