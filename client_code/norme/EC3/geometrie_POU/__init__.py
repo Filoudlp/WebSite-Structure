@@ -55,7 +55,7 @@ class geometrie_POU(geometrie_POUTemplate):
         json=True,  # parse automatiquement la réponse JSON
       )
       self.txb_b.text = response["section_properties"]["b"]
-      self.txb_h.text = response["section_p roperties"]["h"]
+      self.txb_h.text = response["section_properties"]["h"]
       self.txb_e.text = response["section_properties"]["e"]
       self.txb_A.text = response["section_properties"]["A"]
       self.txb_Av.text = response["section_properties"]["Av"]

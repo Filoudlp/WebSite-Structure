@@ -45,7 +45,7 @@ components:
     type: form:dep_gqlhr7sei7ys7:_Components.Text
   - layout_properties: {grid_position: 'PUNJXM,JGNOYR EHUPVF,PMIULF'}
     name: txb_alpha_rhs_shs
-    properties: {appearance: outlined, label: '1.66'}
+    properties: {appearance: outlined, label: '', text: '1.66'}
     type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
   - layout_properties: {grid_position: 'PUNJXM,XZDNSI FJWMAW,ZDWUYA'}
     name: text_6
@@ -53,7 +53,7 @@ components:
     type: form:dep_gqlhr7sei7ys7:_Components.Text
   - layout_properties: {grid_position: 'PUNJXM,XZDNSI DMYUKY,WRZLSV'}
     name: txb_alpha_chs
-    properties: {appearance: outlined, label: '2'}
+    properties: {appearance: outlined, label: '', text: '2'}
     type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
   - layout_properties: {grid_position: 'PUNJXM,JKDEYD CISVSV,CDSEEB'}
     name: text_7
@@ -61,7 +61,7 @@ components:
     type: form:dep_gqlhr7sei7ys7:_Components.Text
   - layout_properties: {grid_position: 'PUNJXM,JKDEYD BDNAQQ,LQGONG'}
     name: txb_alpha_i_h
-    properties: {appearance: outlined, label: '2'}
+    properties: {appearance: outlined, label: '', text: '2'}
     type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
   - layout_properties: {grid_position: 'LDOYMV,YMZATO'}
     name: lbl_beta
@@ -73,7 +73,7 @@ components:
     type: form:dep_gqlhr7sei7ys7:_Components.Text
   - layout_properties: {grid_position: 'LDOYMV,VLAXEL OAFLTS,ETAQNS'}
     name: txb_beta_rhs_shs
-    properties: {appearance: outlined, label: '1.66'}
+    properties: {appearance: outlined, label: '', text: '1.66'}
     type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
   - layout_properties: {grid_position: 'LDOYMV,GYXYMI BKINGX,KVDLEB'}
     name: text_9
@@ -81,7 +81,7 @@ components:
     type: form:dep_gqlhr7sei7ys7:_Components.Text
   - layout_properties: {grid_position: 'LDOYMV,GYXYMI UGFJBA,KTKGXA'}
     name: txb_beta_chs
-    properties: {appearance: outlined, label: '2'}
+    properties: {appearance: outlined, label: '', text: '2'}
     type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
   - layout_properties: {grid_position: 'LDOYMV,IAYEUB JDRKQT,HWCKRP'}
     name: text_10
@@ -89,7 +89,7 @@ components:
     type: form:dep_gqlhr7sei7ys7:_Components.Text
   - layout_properties: {grid_position: 'LDOYMV,IAYEUB OQUGME,NGDJAP'}
     name: txb_beta_i_h
-    properties: {appearance: outlined, label: '1'}
+    properties: {appearance: outlined, label: '', text: '1'}
     type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
   layout_properties: {grid_position: 'TKTGQL,BZMRSL'}
   name: outlined_card_1
