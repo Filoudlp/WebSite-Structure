@@ -66,11 +66,11 @@ db_schema:
 dependencies:
 - dep_id: dep_gqlhr7sei7ys7
   resolution_hints: {app_id: 4UK6WHQ6UX7AKELK, name: Material 3 Theme 2.0, package_name: Material_3_Theme_2_0}
-  version: {version_tag: v1.2.3}
-metadata: {description: 'For information on how to use this template, see our guide here: https://anvil.works/learn/tutorials/using-saas-template'}
-name: SaaS Template
+  version: {version_tag: v1.2.6}
+metadata: {description: Calculation C-lab, title: C-Lab}
+name: CalexStructure_C_Lab
 native_deps: null
-package_name: SaaS_Template
+package_name: CalexStructure_C_Lab
 renamed: true
 runtime_options:
   client_version: '3'

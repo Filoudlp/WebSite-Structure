@@ -49,4 +49,4 @@ class NavMenu(NavMenuTemplate):
   def nvl_logout_click(self, **event_args):
     """This method is called when the component is clicked"""
     anvil.users.logout()
-
+    open_form('Landing_LoginPage')
