@@ -1,4 +1,5 @@
 from ._anvil_designer import effort_CMTemplate
+import m3.components as m3
 from anvil import handle
 
 class effort_CM(effort_CMTemplate):

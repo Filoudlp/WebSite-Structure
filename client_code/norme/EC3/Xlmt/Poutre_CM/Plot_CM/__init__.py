@@ -1,4 +1,5 @@
 from ._anvil_designer import Plot_CMTemplate
+import m3.components as m3
 from anvil import handle
 
 class Plot_CM(Plot_CMTemplate):

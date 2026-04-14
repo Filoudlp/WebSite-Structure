@@ -1,5 +1,6 @@
 from ._anvil_designer import AccountManagement_OKTemplate
 from anvil import *
+import m3.components as m3
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.server
@@ -54,8 +55,3 @@ class AccountManagement_OK(AccountManagement_OKTemplate):
       anvil.server.call('delete_user')
       anvil.users.logout()
       open_form('LoginPage')
-
-  def form_show(self, **event_args):
-    """This method is called when the form is shown on the page"""
-    # TEMPLATE EXPLANATION ONLY - DELETE THIS WHEN YOU'RE READY
-    Notification("Welcome to your app's account management page—a solid foundation for self-service account management that you can customize for your users. Start by updating your name.", title="Template Explanation", timeout=None, style="warning").show()

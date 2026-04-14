@@ -1,5 +1,6 @@
 from ._anvil_designer import Landing_LoginPageTemplate
 from anvil import *
+import m3.components as m3
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
 import anvil.users
@@ -18,7 +19,8 @@ class Landing_LoginPage(Landing_LoginPageTemplate):
 
   def login_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    user = anvil.users.login_with_form(allow_cancel=True, show_signup_option=True, allow_remembered=True)
+    user = anvil.users.login_with_form(allow_cancel=True, show_signup_option=True,
+                                       allow_remembered=True, remember_by_default=False)
     if user:
       open_form('norme.EC3.Xlmt.Poutre_CM')
 
