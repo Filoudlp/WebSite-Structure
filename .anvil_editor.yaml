@@ -26,9 +26,10 @@ unique_ids:
     norme.general.sec_type: '1776150990613345065865956.25885'
     norme.tools_list: '1776165120295278965648783.44324'
     norme.tools_list.tools_concrete: '1776173042796616190395737.12'
-    norme.tools_list.tools_concrete_copy: '1776173534560145414054187.81793'
-    norme.tools_list.tools_concrete_copy_copy: '177617353767911214690350.642931'
-    norme.tools_list.tools_concrete_copy_copy_copy: '1776173539527297188559486.9251'
+    norme.tools_list.tools_rdm: '177617353767911214690350.642931'
+    norme.tools_list.tools_steel: '1776173534560145414054187.81793'
+    norme.tools_list.tools_tools: '1776174104212475351110388.3866'
+    norme.tools_list.tools_wood: '1776174111596283800771241.4511'
   modules:
     Utility: '1775741749789871696718182.7284'
     norme: '1776151141564961949814186.3667'

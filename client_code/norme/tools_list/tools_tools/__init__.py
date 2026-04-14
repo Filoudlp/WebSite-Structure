@@ -1,4 +1,4 @@
-from ._anvil_designer import tools_concreteTemplate
+from ._anvil_designer import tools_toolsTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class tools_concrete(tools_concreteTemplate):
+class tools_tools(tools_toolsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -34,6 +34,6 @@ class tools_concrete(tools_concreteTemplate):
       self.tgicbtn_lmt.selected = True
       self.otld_lmt.visible = True
     else:
-        self.tgicbtn_lmt.icon = "mi:arrow_circle_right"
-        self.tgicbtn_lmt.selected = False
-        self.otld_lmt.visible = False
+      self.tgicbtn_lmt.icon = "mi:arrow_circle_right"
+      self.tgicbtn_lmt.selected = False
+      self.otld_lmt.visible = False

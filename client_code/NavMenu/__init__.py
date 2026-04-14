@@ -18,6 +18,8 @@ class NavMenu(NavMenuTemplate):
     self.init_components(**properties)
     self.check_upgrade_nav_link()
     # Any code you write here will run before the form opens.
+    self.nvl_tool.item = {"1" : "test1", "bou": "test2"}
+    
 
   def check_upgrade_nav_link(self):
     self.user = anvil.users.get_user()

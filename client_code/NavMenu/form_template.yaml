@@ -20,20 +20,21 @@ components:
   name: text_1
   properties: {align: center, text: Projet}
   type: form:dep_gqlhr7sei7ys7:_Components.Text
-- event_bindings: {}
+- data_bindings: []
+  event_bindings: {}
   layout_properties: {grid_position: 'ORITRP,ZNHABP'}
   name: nvl_tool
-  properties: {text: Outils}
+  properties: {selected: false, text: Outils}
   type: form:dep_gqlhr7sei7ys7:_Components.NavigationLink
 - event_bindings: {click: stripe_pricing_link_click}
   layout_properties: {grid_position: 'XTMNQA,RDOWDJ'}
   name: nvl_price
-  properties: {icon: 'mi:attach_money', text: Prix}
+  properties: {icon: 'mi:attach_money', selected: false, text: Prix}
   type: form:dep_gqlhr7sei7ys7:_Components.NavigationLink
 - event_bindings: {click: stripe_pricing_link_click}
   layout_properties: {grid_position: 'EUXKFQ,UCFEFA'}
   name: upgrade_navigation_link
-  properties: {icon: 'mi:arrow_upward', text: Upgrade}
+  properties: {icon: 'mi:arrow_upward', selected: false, text: Upgrade}
   type: form:dep_gqlhr7sei7ys7:_Components.NavigationLink
 - layout_properties: {grid_position: 'QJQNAF,CBECBH'}
   name: nvl_account

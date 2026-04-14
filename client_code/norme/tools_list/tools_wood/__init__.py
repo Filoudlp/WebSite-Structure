@@ -1,4 +1,4 @@
-from ._anvil_designer import tools_concrete_copyTemplate
+from ._anvil_designer import tools_woodTemplate
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -9,7 +9,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 
 
-class tools_concrete_copy(tools_concrete_copyTemplate):
+class tools_wood(tools_woodTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -32,8 +32,8 @@ class tools_concrete_copy(tools_concrete_copyTemplate):
     if self.tgicbtn_lmt.icon == "mi:arrow_circle_right":
       self.tgicbtn_lmt.icon = "mi:arrow_circle_down"
       self.tgicbtn_lmt.selected = True
-      self.tgicbtn_lmt.visible = True
+      self.otld_lmt.visible = True
     else:
       self.tgicbtn_lmt.icon = "mi:arrow_circle_right"
       self.tgicbtn_lmt.selected = False
-      self.tgicbtn_lmt.visible = False
+      self.otld_lmt.visible = False
