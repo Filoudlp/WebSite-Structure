@@ -1,0 +1,39 @@
+from ._anvil_designer import tools_concrete_copy_copyTemplate
+from anvil import *
+import anvil.server
+import anvil.google.auth, anvil.google.drive
+from anvil.google.drive import app_files
+import anvil.users
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+
+
+class tools_concrete_copy_copy(tools_concrete_copy_copyTemplate):
+  def __init__(self, **properties):
+    # Set Form properties and Data Bindings.
+    self.init_components(**properties)
+
+    # Any code you write here will run before the form opens.
+
+  @handle("tgicbtn_solicitation", "click")
+  def tgicbtn_solicitation_click(self, **event_args):
+    if self.tgicbtn_solicitation.icon == "mi:arrow_circle_right":
+      self.tgicbtn_solicitation.icon = "mi:arrow_circle_down"
+      self.tgicbtn_solicitation.selected = True
+      self.otld_soliciation.visible = True
+    else:
+      self.tgicbtn_solicitation.icon = "mi:arrow_circle_right"
+      self.tgicbtn_solicitation.selected = False
+      self.otld_soliciation.visible = False
+
+  @handle("tgicbtn_lmt", "click")
+  def tgicbtn_lmt_click(self, **event_args):
+    if self.tgicbtn_lmt.icon == "mi:arrow_circle_right":
+      self.tgicbtn_lmt.icon = "mi:arrow_circle_down"
+      self.tgicbtn_lmt.selected = True
+      self.tgicbtn_lmt.visible = True
+    else:
+      self.tgicbtn_lmt.icon = "mi:arrow_circle_right"
+      self.tgicbtn_lmt.selected = False
+      self.tgicbtn_lmt.visible = False
