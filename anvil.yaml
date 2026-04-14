@@ -67,6 +67,9 @@ dependencies:
 - dep_id: dep_gqlhr7sei7ys7
   resolution_hints: {app_id: 4UK6WHQ6UX7AKELK, name: Material 3 Theme 2.0, package_name: Material_3_Theme_2_0}
   version: {version_tag: v1.2.6}
+- dep_id: dep_kjaluzjztibpr
+  resolution_hints: {app_id: ROIJW246SPJ5BRDT, name: Clone of Custom sign-up flow, package_name: custom_signup}
+  version: {branch: master}
 metadata: {description: Calculation C-lab, title: C-Lab}
 name: CalexStructure_C_Lab
 native_deps: null
