@@ -45,3 +45,8 @@ class NavMenu(NavMenuTemplate):
     """This method is called when the component is clicked"""
     open_form('norme.tools_list')
 
+  @handle("nvl_logout", "click")
+  def nvl_logout_click(self, **event_args):
+    """This method is called when the component is clicked"""
+    anvil.users.logout()
+
