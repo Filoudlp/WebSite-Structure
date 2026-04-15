@@ -25,3 +25,6 @@ def say_hello():
 def check_connected():
   if anvil.users.get_user():
     print("Connected my reuf")
+  if anvil.users.
+
+  require_user=user_has_subscription(["personal"])
