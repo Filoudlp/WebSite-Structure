@@ -52,7 +52,7 @@ components_by_slot:
             spacing:
               margin: ['5', null, '5', null]
             text: Manage subscription
-            url: ''
+            url: https://billing.stripe.com/p/login/7sYeVd8At6MVcW14Xp2wU00
           type: form:dep_gqlhr7sei7ys7:_Components.Link
         event_bindings: {click: reset_password_link_click}
         layout_properties: {slot: anvil-m3-link-slot}

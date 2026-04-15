@@ -14,6 +14,12 @@ from anvil.tables import app_tables
 #    Package1.say_hello()
 #
 
+def poutre_cm():
+  open_form('norme.EC3.Xlmt.Poutre_CM') 
 
 def say_hello():
   print("Hello, world")
+
+def check_connected():
+  if anvil.users.get_user():
+    print("Connected my reuf")

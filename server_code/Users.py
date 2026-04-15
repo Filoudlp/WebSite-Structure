@@ -32,7 +32,17 @@ def user_has_subscription(allowed_subscriptions):
 @anvil.server.callable(require_user=True)
 def change_name(name):
   user = anvil.users.get_user()
-  user["name"] = name
+  try:
+    customer = stripe.Customer.modify(
+      user["stripe_id"],
+      name=name
+    )
+    user["name"] = name
+    print("Customer email updated successfully:", customer)
+  except stripe.error.StripeError as e:
+    print("Stripe API error:", e)
+  except Exception as e:
+    print("An error occurred when updating a user's email:", e)
   return user
 
 @anvil.server.callable(require_user=True)

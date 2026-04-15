@@ -13,6 +13,7 @@ import anvil.http
 import json
 
 from .....Layout_Calculation import Layout_Calculation
+from ..... import norme
 
 
 class Poutre_CM(Poutre_CMTemplate):
@@ -21,6 +22,7 @@ class Poutre_CM(Poutre_CMTemplate):
     self.init_components(**properties)
     self.btn_optional_click()
     self.btn_detail_rslt_click()
+    norme.check_connected() 
 
     # Any code you write here will run before the form opens.
 
