@@ -5,7 +5,7 @@ import json
 
 # URL de ton API hébergée sur ton serveur (ou Uplink)
 API_BASE_URL = "https://alex25071.pythonanywhere.com"
-API_KEY = 1#anvil.secrets.get_secret("my_api_key") # Pour sécuriser l'accès
+STR_LIB_KEY = anvil.secrets.get_secret('stripe_secret_api_key')
 
 @anvil.server.callable
 def api_call(api_url, payload_json):

@@ -82,6 +82,9 @@ runtime_options:
   server_version: python3-sandbox
   version: 3
 secrets:
+  str_lib_api_secret_key:
+    type: secret
+    value: {IR3CDDWHPQZZ3X3A: qrDtLzfcdw1aggR5uaNlvxhmCwphSCV6PdTW7Z0UxC06vvrB16c6OBP88e5yWsWmaKhz1Pwbv1anYg95l5RyEelwrLZe518Mf8+45D7wI8NUEqZsNRe57QooLzR0WUHR//GZPah8GM6kjpuhJq0bS3TcEqfE3Ahp}
   stripe_secret_api_key:
     type: secret
     value: {IR3CDDWHPQZZ3X3A: Ruty3N1VZEX37XF6agGcf38zTSNvk08Iz+I+YXkn/Vik7O2qYPKKSEAaxGmSpa8c9yN3moxo4sG6tAD4zUJFTkBYiBJI9Kd5w4wLOjw+jpqUu960eqagZYxTXa5b5mZCXC/HbDD0SDOwz5AXcGX7K7S+bgKhi2S7ToLSEf3Bf3gNq07CXRXmELXUjpzzWAszpPcAv6/VLuRK5y/6Po+FZgeIsZM13o6wcMz5s7Eb4STu8m7ITAKrNZr9hwU6zVvVcOzYEIGCOKgazA==, T4O5IQ35ZG7TTCZN: wKicTXysluYtsuFwBYK31Uq1YhX3Xedua/2NOqMILkSdO+vxMTel49STEStiie3I198EXBvuY9xYDXsH1ni1QdXB96Kst9LZm0JMPiNzyPn3kEAMu6wKSLB39Mc3uP+YZt/l/vsmDWREQ+FtgXcekPdaGAZJPMa4G+5eGTfURDdpD2Ifi5ezUtEX/VrBi41ZjLIVgYjzoLQS2s7VqDdqWUaAIzXUrCN5vR9y2LNszbSWQLTzrDBmIqz6ZKeAzricQdAez22e0SPYPg==}
