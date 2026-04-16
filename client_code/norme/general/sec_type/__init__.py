@@ -23,3 +23,11 @@ class sec_type(sec_typeTemplate):
     self.ddm_sec_type.selected_value = self.ddm_sec_type.items[0]
 
     # Any code you write here will run before the form opens.
+
+  @handle("ddm_sec_type", "change")
+  def ddm_sec_type_change(self, **event_args):
+    """This method is called when an item is selected"""
+    if self.ddm_sec_type.selected_value == "Acier":
+      self.tbx_E.text = 210000
+    elif self.ddm_sec_type.selected_value == "Béton":
+      self.tbx_E.text = 33000

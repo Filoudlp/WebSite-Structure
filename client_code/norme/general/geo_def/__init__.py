@@ -56,5 +56,6 @@ class geo_def(geo_defTemplate):
     
     self.txb_b.text = response["section_properties"]["b"]
     self.txb_h.text = response["section_properties"]["h"]
+    self.txb_A.text = response["section_properties"]["A"]
     self.txb_Iy.text = response["section_properties"]["Iy"]
     self.txb_Iz.text = response["section_properties"]["Iz"]

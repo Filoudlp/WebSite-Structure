@@ -44,6 +44,16 @@ components:
       name: txb_h
       properties: {appearance: outlined}
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
+    - event_bindings: {}
+      layout_properties: {grid_position: 'TTQKWH,BPIZLP'}
+      name: lbl_A
+      properties: {text: 'A [mm]'}
+      type: form:dep_gqlhr7sei7ys7:_Components.Text
+    - event_bindings: {}
+      layout_properties: {grid_position: 'TTQKWH,SOHQZO'}
+      name: txb_A
+      properties: {appearance: outlined}
+      type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     - layout_properties: {grid_position: 'WLMULS,SJJFLW'}
       name: lbl_Iy
       properties: {text: 'Iy [mm4]'}
@@ -64,7 +74,7 @@ components:
       type: form:dep_gqlhr7sei7ys7:_Components.TextInput.TextBox
     layout_properties: {grid_position: 'NIYOWQ,HUJJNE'}
     name: box_optional
-    properties: {col_widths: '{"XOKMEZ":15,"CCQLBQ":45,"OSZJTL":15,"XHTVSW":45,"SJJFLW":15,"IXNTYI":45,"PURCOO":15,"OAEHVQ":45,"PPBNCB":45}', role: null}
+    properties: {col_widths: '{"XOKMEZ":15,"CCQLBQ":45,"OSZJTL":15,"XHTVSW":45,"SJJFLW":15,"IXNTYI":45,"PURCOO":15,"OAEHVQ":45,"BPIZLP":15,"SOHQZO":45}', role: null}
     type: ColumnPanel
   layout_properties: {grid_position: 'DTUBZR,VJPYXU'}
   name: outlined_card_1

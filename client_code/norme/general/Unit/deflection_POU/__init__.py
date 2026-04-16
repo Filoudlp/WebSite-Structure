@@ -27,10 +27,13 @@ class deflection_POU(deflection_POUTemplate):
     API_URL = "/api/deflection_calc"
     payload = {
       "length": self.geo_def_1.txb_length.text,
+      "E": self.sec_type_1.tbx_E.text,
       "b": self.geo_def_1.txb_b.text,
       "h": self.geo_def_1.txb_h.text,
-      "Iy": = self.geo_def_1.txb_Iy.text,
-      "Iz" = self.geo_def_1.txb_Iz.text,
-      "load" = self.geo_def_1.txb_load.text,
+      "A": self.geo_def_1.txb_A.text,
+      "Iy": self.geo_def_1.txb_Iy.text,
+      "Iz": self.geo_def_1.txb_Iz.text,
+      "load": self.geo_def_1.txb_load.text,
     }
     response = norme.api_call(API_URL, payload)
+    print(response)
