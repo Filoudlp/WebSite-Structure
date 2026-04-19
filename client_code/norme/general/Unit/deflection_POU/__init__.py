@@ -9,6 +9,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from plotly import graph_objs as go
 
 from ..... import norme
 
@@ -37,3 +38,43 @@ class deflection_POU(deflection_POUTemplate):
     }
     response = norme.api_call(API_URL, payload)
     print(response)
+
+    print(response["b"]["x"])
+    x = response["b"]["x"]
+    m = response["b"]["M"]
+    v = response["b"]["V"]
+    n = response["b"]["N"]
+
+
+    trace0 = go.Scatter(
+      x = x,
+      y = m,
+      name = 'Bending moment',
+      line = dict(
+        color = ('rgb(205, 12, 24)'),
+        width = 1)
+    )
+    trace1 = go.Scatter(
+      x = x,
+      y = v,
+      name = 'Shear force',
+      line = dict(
+        color = ('rgb(205, 12, 24)'),
+        width = 1)
+    )
+    trace2 = go.Scatter(
+      x = x,
+      y = n,
+      name = 'normal force',
+      line = dict(
+        color = ('rgb(205, 12, 24)'),
+        width = 1)
+    )
+    self.plot_cm_1.plot_1.data = [trace0, trace1, trace2]
+
+    self.plot_cm_1.plot_1.layout = dict(title = 'Effort interne',
+                 xaxis = dict(title = 'Angle'),
+                  yaxis = dict(title = 'Effort interne'),
+    )
+
+    
