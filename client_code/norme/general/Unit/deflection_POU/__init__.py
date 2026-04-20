@@ -37,13 +37,11 @@ class deflection_POU(deflection_POUTemplate):
       "load": float(self.effort_def_1.txb_load.text),
     }
     response = norme.api_call(API_URL, payload)
-    print(response)
-
-    print(response["b"]["x"])
-    x = response["b"]["x"]
-    m = response["b"]["M"]
-    v = response["b"]["V"]
-    n = response["b"]["N"]
+    
+    x = response["x"]
+    m = response["M"]
+    v = response["V"]
+    n = response["N"]
 
 
     trace0 = go.Scatter(
@@ -51,7 +49,7 @@ class deflection_POU(deflection_POUTemplate):
       y = m,
       name = 'Bending moment',
       line = dict(
-        color = ('rgb(205, 12, 24)'),
+        color = ('rgb(0, 4, 255)'),
         width = 1)
     )
     trace1 = go.Scatter(
@@ -59,7 +57,7 @@ class deflection_POU(deflection_POUTemplate):
       y = v,
       name = 'Shear force',
       line = dict(
-        color = ('rgb(205, 12, 24)'),
+        color = ('rgb(255, 8, 0)'),
         width = 1)
     )
     trace2 = go.Scatter(
@@ -67,14 +65,45 @@ class deflection_POU(deflection_POUTemplate):
       y = n,
       name = 'normal force',
       line = dict(
-        color = ('rgb(205, 12, 24)'),
+        color = ('rgb(0, 255, 34)'),
         width = 1)
     )
     self.plot_cm_1.plot_1.data = [trace0, trace1, trace2]
 
     self.plot_cm_1.plot_1.layout = dict(title = 'Effort interne',
-                 xaxis = dict(title = 'Angle'),
+                 xaxis = dict(title = 'distance'),
                   yaxis = dict(title = 'Effort interne'),
     )
+
+    self.btn_detailed.enabled = True
+    
+    index_N = n.index(max(n))
+    index_V = v.index(max(v))
+    index_M = m.index(min(m))
+
+    self.lbl_Nmax_val.text =  f"x = {x[index_N]} N = {n[index_N]}"
+    self.lbl_Vmax_val.text =  f"x = {x[index_V]} V = {v[index_V]}"
+    self.lbl_Mmax_val.text =  f"x = {x[index_M]} M = {m[index_M]}"
+    #self.lbl_Nmax_val.text =  f"x = {x[index_N]} N = {n[index_N]}"
+    
+    
+
+  @handle("btn_detailed", "click")
+  def btn_detailed_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    """This method is called when the button is clicked"""
+    if self.btn_detailed.icon == "fa:arrow-right":
+      self.btn_detailed.icon = "fa:arrow-left"
+      self.btn_hide.icon = "fa:arrow-left"
+      self.layout.fun_show_sidesheet(True)
+    else:
+      self.btn_detailed.icon = "fa:arrow-right"
+      self.btn_hide.icon = "fa:arrow-right"
+      self.layout.fun_show_sidesheet(True)
+
+  @handle("btn_hide", "click")
+  def btn_hide_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.btn_detailed_click()
 
     

@@ -25,10 +25,63 @@ components_by_slot:
     name: effort_def_1
     properties: {}
     type: form:norme.general.effort_def
+  - components:
+    - event_bindings: {}
+      layout_properties: {grid_position: 'LXSWPE,RPEHBP'}
+      name: btn_calc
+      properties: {align: center, text: Calculer}
+      type: form:dep_gqlhr7sei7ys7:_Components.Button
+    - event_bindings: {}
+      layout_properties: {grid_position: 'LXSWPE,TNPGKP'}
+      name: btn_detailed
+      properties: {enabled: false, icon: 'fa:arrow-right', role: outlined-button, text: Résultat détaillé}
+      type: Button
+    layout_properties: {}
+    name: outlined_card_2
+    properties: {role: outlined-card}
+    type: ColumnPanel
+  sidesheet:
   - event_bindings: {}
     layout_properties: {}
-    name: btn_calc
-    properties: {align: center, text: Calculer}
-    type: form:dep_gqlhr7sei7ys7:_Components.Button
+    name: btn_hide
+    properties: {icon: 'fa:arrow-right', role: outlined-button, text: Cacher résultat détaillé}
+    type: Button
+  - components:
+    - layout_properties: {grid_position: 'ODLZND,KUETCC'}
+      name: heading_2
+      properties: {scale: small, style: title, text: Résultats détaillés}
+      type: form:dep_gqlhr7sei7ys7:_Components.Heading
+    - layout_properties: {grid_position: 'BDTMGS,WOVBFC'}
+      name: lbl_Nmax
+      properties: {text: 'Effort normal max :'}
+      type: form:dep_gqlhr7sei7ys7:_Components.Text
+    - layout_properties: {grid_position: 'GCBDQW,VGZZUQ'}
+      name: lbl_Nmax_val
+      properties: {}
+      type: form:dep_gqlhr7sei7ys7:_Components.Text
+    - layout_properties: {grid_position: 'JBDNLX,JXRDJQ'}
+      name: lbl_Vmax
+      properties: {text: 'Effort tranchant max : {{VAL}}'}
+      type: form:dep_gqlhr7sei7ys7:_Components.Text
+    - layout_properties: {grid_position: 'ACXVYZ,AIDCPQ'}
+      name: lbl_Vmax_val
+      properties: {}
+      type: form:dep_gqlhr7sei7ys7:_Components.Text
+    - layout_properties: {grid_position: 'BLQPGS,AUYILK'}
+      name: lbl_Mmax
+      properties: {text: 'Effort moment max : {{VAL}}'}
+      type: form:dep_gqlhr7sei7ys7:_Components.Text
+    - layout_properties: {grid_position: 'IJUOLL,NWHAVF'}
+      name: lbl_Mmax_val
+      properties: {}
+      type: form:dep_gqlhr7sei7ys7:_Components.Text
+    - layout_properties: {grid_position: 'IGNWDM,WLMLAC'}
+      name: lbl_dmax
+      properties: {text: 'Déformation max : {{VAL}}'}
+      type: form:dep_gqlhr7sei7ys7:_Components.Text
+    layout_properties: {}
+    name: outlined_card_3
+    properties: {role: outlined-card}
+    type: ColumnPanel
 is_package: true
 layout: {type: 'form:Layout_Calculation'}
