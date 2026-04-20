@@ -19,6 +19,7 @@ class deflection_POU(deflection_POUTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.layout.fun_show_sidesheet(False)
+    self.plot_cm_1.visible = False
 
     # Any code you write here will run before the form opens.
 
@@ -81,11 +82,12 @@ class deflection_POU(deflection_POUTemplate):
     index_V = v.index(max(v))
     index_M = m.index(min(m))
 
-    self.lbl_Nmax_val.text =  f"x = {x[index_N]} N = {n[index_N]:2f}"
-    self.lbl_Vmax_val.text =  f"x = {x[index_V]} V = {v[index_V]:2f}"
-    self.lbl_Mmax_val.text =  f"x = {x[index_M]} M = {m[index_M]:2f}"
+    self.lbl_Nmax_val.text =  f"x = {x[index_N]:.2f} N = {n[index_N]:.2f}"
+    self.lbl_Vmax_val.text =  f"x = {x[index_V]:.2f} V = {v[index_V]:.2f}"
+    self.lbl_Mmax_val.text =  f"x = {x[index_M]:.2f} M = {m[index_M]:.2f}"
     #self.lbl_Nmax_val.text =  f"x = {x[index_N]} N = {n[index_N]}"
-    
+
+    self.plot_cm_1.visible = True
     
 
   @handle("btn_detailed", "click")
