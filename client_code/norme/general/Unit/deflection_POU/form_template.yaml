@@ -79,6 +79,10 @@ components_by_slot:
       name: lbl_dmax
       properties: {text: 'Déformation max : {{VAL}}'}
       type: form:dep_gqlhr7sei7ys7:_Components.Text
+    - layout_properties: {grid_position: 'FVZGBA,JMYSSO'}
+      name: lbl_dmax_val
+      properties: {}
+      type: form:dep_gqlhr7sei7ys7:_Components.Text
     layout_properties: {}
     name: outlined_card_3
     properties: {role: outlined-card}

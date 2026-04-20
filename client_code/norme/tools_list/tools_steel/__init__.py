@@ -10,6 +10,8 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
+from routing.router import navigate
+
 
 class tools_steel(tools_steelTemplate):
   def __init__(self, **properties):
@@ -44,3 +46,8 @@ class tools_steel(tools_steelTemplate):
   def btn_pou_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('norme.EC3.Xlmt.Poutre_CM')
+
+  @handle("btn_compression", "click")
+  def btn_compression_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    navigate(path="/cm_compression")

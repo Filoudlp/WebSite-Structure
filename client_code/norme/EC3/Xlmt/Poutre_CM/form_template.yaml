@@ -28,7 +28,7 @@ components_by_slot:
   - layout_properties: {}
     name: effort_cm_2
     properties: {}
-    type: form:norme.EC3.Xlmt.Poutre_CM.effort_CM
+    type: form:norme.EC3.effort_CM
   - components:
     - event_bindings: {}
       layout_properties: {grid_position: 'PWXZBX,ZXNPGN'}

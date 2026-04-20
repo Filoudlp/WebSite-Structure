@@ -1,0 +1,20 @@
+components_by_slot:
+  content:
+  - layout_properties: {}
+    name: heading_1
+    properties: {text: Compression (EN 1993-1-1)}
+    type: form:dep_gqlhr7sei7ys7:_Components.Heading
+  - layout_properties: {}
+    name: plot_cm_1
+    properties: {}
+    type: form:norme.EC3.Xlmt.Poutre_CM.Plot_CM
+  - layout_properties: {}
+    name: geometrie_pou_1
+    properties: {}
+    type: form:norme.EC3.geometrie_POU
+  - layout_properties: {}
+    name: effort_normal_1
+    properties: {}
+    type: form:norme.effort_normal
+is_package: true
+layout: {type: 'form:Layout_Calculation'}
