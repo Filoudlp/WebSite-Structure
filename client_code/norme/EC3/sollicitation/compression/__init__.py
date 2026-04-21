@@ -78,3 +78,8 @@ class compression(compressionTemplate):
     else:
       self.btn_optional.icon = "fa:arrow-down"
       self.option_avancer_cm_1.visible = True
+
+  @handle("btn_calc", "click")
+  def btn_calc_click(self, **event_args):
+    """This method is called when the component is clicked."""
+    pass  # Write Code Here
