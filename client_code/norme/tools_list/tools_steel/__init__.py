@@ -51,3 +51,8 @@ class tools_steel(tools_steelTemplate):
   def btn_compression_click(self, **event_args):
     """This method is called when the button is clicked"""
     navigate(path="/cm_compression")
+
+  @handle("btn_shear", "click")
+  def btn_shear_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    navigate(path="/cm_shear")

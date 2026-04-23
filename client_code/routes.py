@@ -23,6 +23,10 @@ class CMCompressionRoute(Route):
   path = "/cm_compression"
   form = 'norme.EC3.sollicitation.compression'
 
+class CMShearRoute(Route):
+  path = "/cm_shear"
+  form = 'norme.EC3.sollicitation.shear'
+
 #=======
 #= RDM =
 #=======
