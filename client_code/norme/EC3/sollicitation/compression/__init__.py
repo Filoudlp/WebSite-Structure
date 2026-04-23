@@ -14,6 +14,7 @@ from plotly import graph_objs as go
 from ..... import norme
 
 class compression(compressionTemplate):
+  # Statut : OK without buckling
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -48,6 +49,8 @@ class compression(compressionTemplate):
     self.rslt_cm_1.lbl_els_percent.visible = False
     self.rslt_cm_1.lbl_els_worst_verif.visible = False
     self.rslt_cm_1.plt_els.visible = False
+
+    self.rslt_cm_1.lbl_elu_worst_verif.visible = False
 
     self.option_avancer_cm_1.lbl_alpha.visible = False
     self.option_avancer_cm_1.lbl_beta.visible = False
@@ -94,19 +97,25 @@ class compression(compressionTemplate):
       "fy": float(fy[1:]),
       "gamma_m0": float(self.option_avancer_cm_1.txb_gamma_m0.text),
       "A": float(self.geometrie_pou_1.txb_A.text),
-      "load": float(self.effort_normal_1.txb_N.text),
+      "load": norme.convert_unit(float(self.effort_normal_1.txb_N.text), "kN", "N"),
     }
     response = norme.api_call(API_URL, payload)
     
-    print(response["nc_rd"])
-    print(response["verif"])
     formula = response["nc_rd"]["formula"]
     formula_val = response["nc_rd"]["formula_values"]
     ref = response["nc_rd"]["ref"]
-    nc_rd = response["nc_rd"]["result"]
+    nc_rd = norme.convert_unit(response["nc_rd"]["result"], "N", "kN")
+    verif = response["verif"]["formula_values"]
+    verif_ref = response["verif"]["ref"]
     ned = float(self.effort_normal_1.txb_N.text)
 
-    self.rslt_cm_1.lbl_elu_percent.text = ned / nc_rd * 100
+    self.lbl_formula.text = formula
+    self.lbl_formula_values.text = formula_val
+    self.lbl_ref.text = f"{ref}\n"
+    self.lbl_verif.text = verif
+    self.lbl_verif_ref.text = verif_ref
+
+    self.rslt_cm_1.lbl_elu_percent.text = f"Taux : {ned / nc_rd * 100:.2f} %"
 
     # Valeur à afficher
     pourcentage = response["verif"]["result"] * 100
@@ -133,11 +142,30 @@ class compression(compressionTemplate):
     
     fig.update_layout(
       annotations=[dict(
-        text=f'<b>{pourcentage}%</b>',
+        text=f'<b>{pourcentage:.2f}%</b>',
         x=0.5, y=0.5,
         font=dict(size=40, color=couleur),
         showarrow=False
       )],
       margin=dict(t=20, b=20, l=20, r=20)
     )
-    self.plot_cm_1.plot_1.figure = fig
+    self.rslt_cm_1.plt_elu.figure = fig
+
+    self.btn_detailed.enabled = True
+
+  @handle("btn_detailed", "click")
+  def btn_detailed_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if self.btn_detailed.icon == "fa:arrow-right":
+      self.btn_detailed.icon = "fa:arrow-left"
+      self.btn_hide.icon = "fa:arrow-left"
+      self.layout.fun_show_sidesheet(True)
+    else:
+      self.btn_detailed.icon = "fa:arrow-right"
+      self.btn_hide.icon = "fa:arrow-right"
+      self.layout.fun_show_sidesheet(True)
+
+  @handle("btn_hide", "click")
+  def btn_hide_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.btn_detailed_click()

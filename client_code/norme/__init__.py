@@ -84,3 +84,31 @@ def api_call(api_url, payload_json=None):
       return {"error": f"Erreur API ({e.status}): {e.content}"}
     except Exception as e:
       return {"error": f"Erreur inattendue : {str(e)}"}
+
+def convert_unit(val: float, base: str, end: str):
+  """ Fonction to convert unit with category check """
+  # Définition des familles d'unités
+  g = 9.81
+  categories = {
+    "force_masse": {
+      "n": 1, "dn": 10, "kn": 1000, "mn": 1000000,
+      "g": 0.001 * g, "kg": 1 * g, "t": 1000 * g 
+    },
+    "longueur": {
+      "m": 1, "dm": 0.1, "cm": 0.01, "mm": 0.001, "km": 1000
+    },
+    "pression": {
+      "pa": 1, "kpa": 1000, "mpa": 1000000, "bar": 100000
+    }
+  }
+
+  base, end = base.lower(), end.lower()
+
+  # Trouver à quelle catégorie appartient l'unité de base
+  for units in categories.values():
+    if base in units and end in units:
+      return val * (units[base] / units[end])
+
+    # Si on arrive ici, c'est que les unités sont incompatibles ou inconnues
+  raise ValueError(f"Conversion impossible entre '{base}' et '{end}'.")
+  

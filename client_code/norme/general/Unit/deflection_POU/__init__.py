@@ -93,7 +93,6 @@ class deflection_POU(deflection_POUTemplate):
   @handle("btn_detailed", "click")
   def btn_detailed_click(self, **event_args):
     """This method is called when the button is clicked"""
-    """This method is called when the button is clicked"""
     if self.btn_detailed.icon == "fa:arrow-right":
       self.btn_detailed.icon = "fa:arrow-left"
       self.btn_hide.icon = "fa:arrow-left"
