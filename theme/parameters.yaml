@@ -357,7 +357,6 @@ roles:
 - {name: block-toggle}
 - {name: ' block-body'}
 - {name: ' block-body-params'}
-- {name: ' block-body'}
 - {name: row-item}
 - {name: ' row-name'}
 - {name: row-value}
@@ -365,3 +364,5 @@ roles:
 - {name: row-formula}
 - {name: row-ref}
 - {name: row-input}
+- {name: block-card}
+- {name: page-container}

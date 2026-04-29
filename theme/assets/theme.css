@@ -9,10 +9,218 @@
   border-radius: 4px;
   padding: 15px;
 }
-.block-header-data { background: #FFF2CC; }
-.block-header-flex { background: #DEEBF7; }
-.cell-input        { background: #FCE4D6; }  /* orange Excel */
-.cell-param        { background: #DDEBF7; }  /* bleu clair */
-.cell-result-ok    { background: #C6EFCE; color: #006100; }
-.cell-result-nok   { background: #FFC7CE; color: #9C0006; }
-.cell-formula      { font-style: italic; color: #595959; font-size: 11px; }
+
+/* ============================================
+GLOBAL — Fond gris clair type app pro
+============================================ */
+body, .anvil-panel {
+  background-color: #F5F5F7 !important;
+  font-family: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* ============================================
+BLOCK CARD — Conteneur principal
+============================================ */
+.anvil-role-block-card {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  margin-bottom: 16px !important;
+  max-width: 500px;
+}
+
+/* ============================================
+HEADER — Bandeau coloré (jaune par défaut)
+============================================ */
+.anvil-role-block-header {
+  background-color: #FFE699 !important;
+  padding: 10px 14px !important;
+  border-bottom: 2px solid #E0C36B;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100% !important;
+  min-height: 50px !important;        /* assure assez de place */
+}
+
+/* Variante bleue pour les blocs de résultats — 
+il faut ajouter le rôle "block-header-blue" */
+.anvil-role-block-header-blue {
+  background-color: #BDD7EE !important;
+  border-bottom: 2px solid #7FAEDC;
+}
+
+.anvil-role-block-title {
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  color: #2D2D2D !important;
+  letter-spacing: 0.2px;
+  margin: 0 !important;
+}
+
+.anvil-role-block-toggle {
+  color: #5A5A5A !important;
+  font-size: 18px !important;
+  background: transparent !important;
+  border: none !important;
+  cursor: pointer;
+  position: absolute !important;
+  right: 12px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+/* Le header doit être positionné pour que l'absolute fonctionne */
+.anvil-role-block-header {
+  position: relative !important;
+}
+
+/* ============================================
+BODY — Zones de contenu
+============================================ */
+.anvil-role-block-body,
+.anvil-role-block-body-params {
+  padding: 0 !important;
+  background-color: #FFFFFF;
+}
+
+.anvil-role-block-body-params {
+  background-color: #F8F9FB !important;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+/* ============================================
+ROW ITEM — Une ligne (4 colonnes)
+============================================ */
+.anvil-role-row-item {
+  padding: 8px 14px !important;
+  border-bottom: 1px solid #EEEEEE;
+  background-color: #FFFFFF;
+  width: 100% !important;
+}
+
+/* Cible le conteneur interne d'Anvil (flow ou column panel) */
+.anvil-role-row-item > .anvil-container,
+.anvil-role-row-item .flow-panel-gutter,
+.anvil-role-row-item .belongs-to-form {
+  display: grid !important;
+  grid-template-columns: 80px 130px 60px 1fr 100px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* TextBox de valeur dans RowItem — largeur adaptée à ~4 chiffres */
+.anvil-role-row-input input,
+.anvil-role-row-input .form-control {
+  width: 60px !important;
+  min-width: 60px !important;
+  max-width: 60px !important;
+  text-align: right;
+  padding: 4px 6px !important;
+  box-sizing: border-box;
+}
+
+/* ============================================
+ROW — Variantes (vert OK / rouge NOK / param)
+============================================ */
+.anvil-role-row-ok {
+  background-color: #C6EFCE !important;
+  font-weight: 600;
+}
+
+.anvil-role-row-ok:hover {
+  background-color: #B6E5BE !important;
+}
+
+.anvil-role-row-nok {
+  background-color: #FFC7CE !important;
+  font-weight: 600;
+}
+
+.anvil-role-row-nok:hover {
+  background-color: #F5B7BF !important;
+}
+
+.anvil-role-row-param {
+  background-color: #F8F9FB !important;
+}
+
+/* ============================================
+COLONNES de la ROW
+============================================ */
+.anvil-role-row-name {
+  font-weight: 600 !important;
+  color: #B83A3A !important;          /* rouge sombre type Excel */
+  font-size: 14px !important;
+}
+
+.anvil-role-row-input input,
+.anvil-role-row-input {
+  background-color: #FCE4D6 !important;  /* orange pâle Excel */
+  border: 1px solid #F4B084 !important;
+  border-radius: 4px !important;
+  padding: 4px 8px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #2D2D2D !important;
+  text-align: center;
+  width: 100% !important;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.anvil-role-row-input input:focus {
+  border-color: #E07B40 !important;
+  background-color: #FFF !important;
+  outline: none;
+}
+
+.anvil-role-row-value {
+  font-weight: 600 !important;
+  color: #2D2D2D !important;
+  font-size: 14px !important;
+  text-align: center;
+  background-color: #FFF9E6;            /* jaune très pâle pour les calculés */
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.anvil-role-row-unit {
+  color: #6B6B6B !important;
+  font-size: 13px !important;
+  font-style: normal;
+}
+
+.anvil-role-row-formula {
+  color: #888888 !important;
+  font-size: 12px !important;
+  font-style: italic;
+}
+
+.anvil-role-row-ref {
+  color: #A0A0A0 !important;
+  font-size: 11px !important;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+/* ============================================
+TITRE PAGE
+============================================ */
+h1, .anvil-role-page-title {
+  color: #1F2937 !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #E0E0E0;
+}
+
+/* ============================================
+Suppression du logo Anvil (optionnel)
+============================================ */
+.anvil-branding {
+  display: none !important;
+}

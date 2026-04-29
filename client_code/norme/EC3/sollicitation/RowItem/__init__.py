@@ -6,8 +6,17 @@ class RowItem(RowItemTemplate):
   def __init__(self, name="", value="", unit="", formula="",
                ref="", editable=False, row_type="input", **properties):
     self.init_components(**properties)
-
+    
     self.lbl_name.text = name
+  #  role_map = {
+  #    "input": "row-item",
+  #    "param": "row-param",
+  #    "result": "row-item",
+ #     "ok": "row-ok",
+  #    "nok": "row-nok",
+  #  }
+  #  self.role = role_map.get(row_type, "row-item")
+    
     self.lbl_unit.text = unit
     self.lbl_formula.text = formula
     self.lbl_ref.text = ref
@@ -33,7 +42,7 @@ class RowItem(RowItemTemplate):
     self.background = colors.get(row_type, "#FFFFFF")
 
     # Event sur changement
-    self.tb_value.set_event_handler('change', self._on_change)
+  #  self.tb_value.set_event_handler('change', self._on_change)
 
   def _on_change(self, **event_args):
     self.raise_event('x-value-changed')

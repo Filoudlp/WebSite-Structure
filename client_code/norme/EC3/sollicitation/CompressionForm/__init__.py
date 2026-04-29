@@ -1,6 +1,7 @@
 from ._anvil_designer import CompressionFormTemplate
 from anvil import *
 import anvil.server
+import anvil.designer
 
 from ..BlockCard import BlockCard
 from ..RowItem import RowItem
@@ -10,10 +11,16 @@ class CompressionForm(CompressionFormTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
 
+    self.content_panel.role = "page-container"
     # ============== BLOC DONNÉES ==============
     self.card_data = BlockCard(
       title="Compression — Données",
-      header_color="#FFF2CC"
+      header_color="#yellow"
+    )
+
+    self.card_data2 = BlockCard(
+      title="autre — Données",
+      header_color="#yellow"
     )
 
     # Input principal
@@ -50,14 +57,26 @@ class CompressionForm(CompressionFormTemplate):
       row.add_event_handler('x-value-changed', self.calculer)
       self.card_data.add_param(row)
 
-    self.content_panel.add_component(self.card_data)
+    cp = ColumnPanel()
+    #cp.add_component(self.card_data)
 
     # ============== BLOC RÉSULTATS ==============
     self.card_results = BlockCard(
       title="Vérification — EC3 §6.2.4",
-      header_color="#DEEBF7"
+      header_color="blue"
     )
-    self.content_panel.add_component(self.card_results)
+    self.card_results2 = BlockCard(
+      title="Vérification — EC3 §6.2.4",
+      header_color="blue"
+    )
+    cp.add_component(self.card_results)
+    self.flow_panel_1.add_component(self.card_data)
+
+    cp2 = ColumnPanel()
+    #cp2.add_component(self.card_data2)
+    #cp2.add_component(self.card_results2)
+    self.flow_panel_1.add_component(self.card_data2)
+    
 
     # Calcul initial
     self.calculer()
