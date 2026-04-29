@@ -9,3 +9,10 @@
   border-radius: 4px;
   padding: 15px;
 }
+.block-header-data { background: #FFF2CC; }
+.block-header-flex { background: #DEEBF7; }
+.cell-input        { background: #FCE4D6; }  /* orange Excel */
+.cell-param        { background: #DDEBF7; }  /* bleu clair */
+.cell-result-ok    { background: #C6EFCE; color: #006100; }
+.cell-result-nok   { background: #FFC7CE; color: #9C0006; }
+.cell-formula      { font-style: italic; color: #595959; font-size: 11px; }

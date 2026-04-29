@@ -350,3 +350,18 @@ roles:
   name: input-error
 - {components: null, name: italic}
 - {name: input-card}
+- components: []
+  name: block-card
+- {name: block-header}
+- {name: block-title}
+- {name: block-toggle}
+- {name: ' block-body'}
+- {name: ' block-body-params'}
+- {name: ' block-body'}
+- {name: row-item}
+- {name: ' row-name'}
+- {name: row-value}
+- {name: row-unit}
+- {name: row-formula}
+- {name: row-ref}
+- {name: row-input}
